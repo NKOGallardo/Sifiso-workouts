@@ -58,6 +58,13 @@ button {
     font-weight: bold;
 }
 
+.profile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+}
+
 h1 {
     color: rgb(255, 255, 255);
     font-size: 2em;
@@ -65,6 +72,16 @@ h1 {
 
 p {
     color: rgb(200, 200, 200);
-    font-size: 1rem;
-    
+    font-size: 1rem; 
+}
+
+@media screen and (max-width: 500px) {
+    .nav-links {
+        display: none;
+    }
+
+    header {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
