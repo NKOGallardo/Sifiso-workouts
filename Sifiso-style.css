@@ -1,0 +1,70 @@
+Body {
+    background: rgb(38, 38, 38);
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 50px;
+}
+
+.nav-links {
+    margin-right: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    transition: 200ms;
+    font-size: 30px;
+    transform: scale(1.2);
+    color: rgb(185, 185, 185);
+}
+
+.main-index {
+    padding-top: 100px;
+    align-items: center;
+}
+
+Section {
+    text-align: center;
+}
+
+button {
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(185, 185, 185);
+    margin-top: 80px;
+    box-shadow: 0px 0px 10px rgb(185, 185, 185);
+}
+
+.logo {
+    font-weight: bold;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+}
+
+p {
+    color: rgb(200, 200, 200);
+    font-size: 1rem;
+    
+}
