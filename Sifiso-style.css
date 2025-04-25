@@ -303,3 +303,107 @@ Section {
     background-color: #f94f6d;
     color: white;
 }
+
+/* Stop watch */
+
+
+.container-stop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+}
+
+.h1-stop {
+  color: #f94f6d;
+  text-align: center;
+}
+
+.digit {
+  font-size: 150px;
+  color: #f94f6d;
+}
+
+.txt {
+  font-size: 30px;
+  color: #fffcd6;
+}
+
+#buttons {
+  margin-top: 50px;
+}
+
+.stop-btn {
+  width: 100px;
+  padding: 10px 15px;
+  margin: 0px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+  color: white;
+  font-weight: 500;
+}
+
+#start {
+  background-color: #f94f6d;
+  border: solid 1px #f94f6d;
+}
+
+#stop {
+  background-color: #0e85fc;
+  border: solid 1px #0e85fc;
+}
+
+#reset {
+  background-color: transparent;
+  color: #f94f6d;
+  border: solid 1px #f94f6d;
+}
+
+#back {
+  background-color: transparent;
+  color: #f94f6d;
+  border: solid 1px #f94f6d;
+}
+
+#back:hover {
+  background-color: #f94f6d;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+/* ✅ Mobile-friendly adjustments */
+@media screen and (max-width: 500px) {
+  .h1-stop {
+      font-size: 1.8rem;
+  }
+
+  .digit {
+      font-size: 2.5rem;
+  }
+
+  .txt {
+      font-size: 1rem;
+  }
+
+  .stop-btn {
+      min-width: 80px;
+      font-size: 0.9rem;
+      padding: 8px 10px;
+      margin: 5px;
+  }
+
+  #time {
+      gap: 3px;
+      margin-bottom: 20px;
+  }
+
+  #buttons {
+      gap: 8px;
+  }
+}
