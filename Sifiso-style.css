@@ -472,6 +472,46 @@ Section {
   text-decoration: none;
 }
 
+@media (max-width: 600px) {
+  .profile-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .profile-card img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+  }
+
+  .profile-info {
+      align-items: center;
+  }
+
+  .profile-info .btn {
+      width: 100%;
+      max-width: 200px;
+  }
+  
+  .profile-info .Report {
+    font-size: 14px;
+    text-decoration: none;
+    color: #ff3c3c;
+    border: solid 1px #ff3c3c;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .profile-info .Report:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    background-color: #ff3c3c;
+    text-decoration: none;
+  }
+}
+
 .vid {
   width: 300px;
   height: 200px;
