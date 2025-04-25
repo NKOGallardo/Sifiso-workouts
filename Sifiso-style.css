@@ -226,12 +226,6 @@ Section {
         padding: 8px;
       }
     }
-    
-  .Profile-s p {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 15px;
-  }
   
   .btn {
     background-color: #f94f6d;
@@ -246,18 +240,6 @@ Section {
   
   .btn:hover {
     background-color: #d73855;
-  }
-  
-  .Report {
-    display: inline-block;
-    margin-top: 10px;
-    color: #888;
-    font-size: 14px;
-    text-decoration: underline
-  }
-  
-  .Report:hover {
-    color: #ffcc00;
   }
   
   /* Responsive for 500px and below */
@@ -406,4 +388,94 @@ Section {
   #buttons {
       gap: 8px;
   }
+}
+
+/* Profile */
+
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #111;
+}
+
+.profile-card {
+  background-color: #222;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center; /* vertically center content */
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Image on the left */
+.profile-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Text content centered on the right */
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Name and text */
+.profile-info h2.Name {
+  font-size: 28px;
+  margin: 0;
+  color: #636363;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Buttons */
+.profile-info .btn {
+  padding: 10px 20px;
+  background-color: #ff3c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.profile-info .btn:hover {
+  background-color: #cc2f2f;
+}
+
+.profile-info .Report {
+  font-size: 14px;
+  text-decoration: none;
+  color: #ff3c3c;
+  border: solid 1px #ff3c3c;
+}
+
+.profile-info .Report:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  background-color: #ff3c3c;
+  text-decoration: none;
+}
+
+.vid {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-right: 1000px;
 }
