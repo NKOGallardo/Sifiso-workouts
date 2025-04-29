@@ -286,6 +286,48 @@ Section {
     color: white;
 }
 
+/* Cramps table */
+
+.body-cramp {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #222;
+  margin: 0;
+}
+
+.head-cramp {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.cramp-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Make it scroll on small screens */
+}
+.th1, .th1 {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.th2 {
+  background-color: #f94f6d;
+  color: white;
+}
+
+.tr1:hover {
+  background-color: #cc2f2f;
+}
+
 /* Stop watch */
 
 
