@@ -1,563 +1,309 @@
+
+
+  /* Base Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #111;
-    color: #fff;
-    line-height: 1.6;
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header Styling */
 .header {
-    background-color: #222;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #222;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00ff95;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.logo .h1 {
+  font-size: 1.8rem;
+  color: #00ff95;
+  animation: slideIn 0.6s ease-in-out;
 }
 
-.nav-links a:hover {
-    color: #f94f6d;
+/* Navigation */
+.nav-links {
+  display: flex;
+  gap: 15px;
 }
 
+.nav-links .a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 14px;
+  background: #00ff9544;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links .a:hover {
+  background: #00ff95;
+  color: #000;
+}
+
+/* Main Section */
 .main-index {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    text-align: center;
-    padding: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .main-index h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00ff95;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .main-index p {
-    font-size: 18px;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
 }
 
+/* Button */
 .button-home {
-    background-color: #f94f6d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.button-home:hover {
-    background-color: #d73855;
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: #222;
-    color: #999;
-    text-align: center;
-    padding: 10px;
-}
-
-Section {
-    text-align: center;
-}
-
-.logo {
-    font-weight: bold;
-}
-
-    /* 📱 Responsive Styles for screens 500px or smaller */
-    @media (max-width: 500px) {
-        .logo {
-            font-weight: bold;
-        }
-  
-        .nav-links {
-          flex-direction: column;
-          width: 100%;
-          margin-top: 10px;
-        }
-  
-        .nav-links a {
-          margin: 5px 0;
-        }
-  
-        .main-index h1 {
-          font-size: 28px;
-        }
-  
-        .main-index p {
-          font-size: 16px;
-        }
-  
-        .button-home {
-          width: 100%;
-          padding: 12px;
-          font-size: 18px;
-          margin-bottom: 20px;
-        }
-
-        .profile {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            margin-left: 50px;
-        }
-    
-        .nav-links {
-            display: none;
-        }
-      }
-/* Work */
-
-.sung {
-    height: 500px;
-    width: 300px;
-}
-
-
-.logo h1 {
-      color: #f94f6d;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .profile {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid #f94f6d;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .profile:hover {
-      transform: scale(1.1);
-    }
-
-    .program {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #1a1a1a;
-      border-radius: 10px;
-    }
-
-    .program h1 {
-      font-size: 22px;
-      color: #ffcc00;
-      margin-bottom: 10px;
-    }
-
-    .program p {
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-
-    .program h2 {
-      font-size: 20px;
-      color: #f94f6d;
-      margin-bottom: 10px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-
-    table th, table td {
-      border: 1px solid #444;
-      padding: 10px;
-      text-align: left;
-    }
-
-    table thead {
-      background-color: #2b2b2b;
-    }
-
-    table th {
-      color: #f94f6d;
-    }
-
-    table tr:nth-child(even) {
-      background-color: #2a2a2a;
-    }
-
-    table tr:nth-child(odd) {
-      background-color: #1f1f1f;
-    }
-
-    strong {
-      color: #ffcc00;
-    }
-
-    @media (max-width: 500px) {
-
-      .program h1 {
-        font-size: 18px;
-      }
-
-      .program h2 {
-        font-size: 18px;
-      }
-
-      .profile {
-        margin-top: 10px;
-      }
-
-      table th, table td {
-        font-size: 14px;
-        padding: 8px;
-      }
-    }
-  
-  .btn {
-    background-color: #f94f6d;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #d73855;
-  }
-  
-  /* Responsive for 500px and below */
-  @media (max-width: 500px) {
-  
-    .logo h1 {
-      font-size: 22px;
-    }
-  
-    .profile {
-      margin-top: 10px;
-      width: 45px;
-      height: 45px;
-    }
-  
-    .Profile-s .pro {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .Name {
-      font-size: 20px;
-    }
-  
-    .btn {
-      width: 80%;
-      font-size: 18px;
-    }
-  }
-
-.added {
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 1px solid #f94f6d;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    text-decoration: none;
-}
-
-.added:hover {
-    background-color: #f94f6d;
-    color: white;
-}
-
-/* Cramps table */
-
-.body-cramp {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: #222;
-  margin: 0;
-}
-
-.head-cramp {
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.table-container {
-  overflow-x: auto;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.cramp-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px; /* Make it scroll on small screens */
-}
-.th1, .th1 {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-.th2 {
-  background-color: #f94f6d;
-  color: white;
-}
-
-.tr1:hover {
-  background-color: #cc2f2f;
-}
-
-/* Stop watch */
-
-
-.container-stop {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #222;
-}
-
-.h1-stop {
-  color: #f94f6d;
-  text-align: center;
-}
-
-.digit {
-  font-size: 150px;
-  color: #f94f6d;
-}
-
-.txt {
-  font-size: 30px;
-  color: #fffcd6;
-}
-
-#buttons {
-  margin-top: 50px;
-}
-
-.stop-btn {
-  width: 100px;
-  padding: 10px 15px;
-  margin: 0px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 20px;
-  transition: 0.5s;
-  color: white;
-  font-weight: 500;
-}
-
-#start {
-  background-color: #f94f6d;
-  border: solid 1px #f94f6d;
-}
-
-#stop {
-  background-color: #0e85fc;
-  border: solid 1px #0e85fc;
-}
-
-#reset {
-  background-color: transparent;
-  color: #f94f6d;
-  border: solid 1px #f94f6d;
-}
-
-#back {
-  background-color: transparent;
-  color: #f94f6d;
-  border: solid 1px #f94f6d;
-}
-
-#back:hover {
-  background-color: #f94f6d;
-  color: white;
-  transform: scale(1.1);
-}
-
-
-/* ✅ Mobile-friendly adjustments */
-@media screen and (max-width: 500px) {
-  .h1-stop {
-      font-size: 1.8rem;
-  }
-
-  .digit {
-      font-size: 2.5rem;
-  }
-
-  .txt {
-      font-size: 1rem;
-  }
-
-  .stop-btn {
-      min-width: 80px;
-      font-size: 0.9rem;
-      padding: 8px 10px;
-      margin: 5px;
-  }
-
-  #time {
-      gap: 3px;
-      margin-bottom: 20px;
-  }
-
-  #buttons {
-      gap: 8px;
-  }
-}
-
-/* Profile */
-
-.profile-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #111;
-}
-
-.profile-card {
-  background-color: #222;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  display: flex;
-  align-items: center; /* vertically center content */
-  gap: 30px;
-  max-width: 900px;
-  width: 100%;
-}
-
-/* Image on the left */
-.profile-card img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* Text content centered on the right */
-.profile-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-}
-
-/* Name and text */
-.profile-info h2.Name {
-  font-size: 28px;
-  margin: 0;
-  color: #636363;
-}
-
-.profile-info p {
-  font-size: 16px;
-  margin: 0;
-}
-
-/* Buttons */
-.profile-info .btn {
-  padding: 10px 20px;
-  background-color: #ff3c3c;
-  color: white;
+  background: #00ff95;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 10px;
   font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 20px;
   transition: background 0.3s ease;
 }
 
-.profile-info .btn:hover {
-  background-color: #cc2f2f;
+.button-home:hover {
+  background: #00dd7f;
 }
 
-.profile-info .Report {
-  font-size: 14px;
+.added {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 8px 12px;
   text-decoration: none;
-  color: #ff3c3c;
-  border: solid 1px #ff3c3c;
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
-.profile-info .Report:hover {
-  color: #ffffff;
-  text-decoration: underline;
-  background-color: #ff3c3c;
-  text-decoration: none;
+.added:hover {
+  background: #00ff95;
+  color: #000;
 }
 
+/* Footer */
+footer {
+  background: #222;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 2px solid #00ff95;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile-Friendly */
 @media (max-width: 600px) {
-  .profile-card {
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
-  .profile-card img {
-      width: 100%;
-      height: auto;
-      max-width: 300px;
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
   }
 
-  .profile-info {
-      align-items: center;
+  .nav-links .a {
+    width: 100%;
+    text-align: center;
   }
 
-  .profile-info .btn {
-      width: 100%;
-      max-width: 200px;
-  }
-  
-  .profile-info .Report {
-    font-size: 14px;
-    text-decoration: none;
-    color: #ff3c3c;
-    border: solid 1px #ff3c3c;
-    padding: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
+  .main-index h1 {
+    font-size: 1.6rem;
   }
 
-  .profile-info .Report:hover {
-    color: #ffffff;
-    text-decoration: underline;
-    background-color: #ff3c3c;
-    text-decoration: none;
+  .main-index p {
+    font-size: 0.95rem;
+  }
+
+  .button-home {
+    width: 100%;
+  }
+
+  .added {
+    display: block;
+    margin: 10px auto;
   }
 }
 
-.vid {
-  width: 300px;
-  height: 200px;
-  border-radius: 20px;
+/* -------------------- Weekly Workout Page -------------------- */
+
+/* Header with logo + profile pic */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 15px 20px;
+  border-bottom: 2px solid #00ff95;
+}
+
+.logo .h1 {
+  font-size: 1.5rem;
+  color: #00ff95;
+  animation: popIn 0.6s ease-in-out;
+}
+
+.logo p {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.profile {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #00ff95;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.1);
+}
+
+/* Program Section */
+.program {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.program h1 {
+  color: #ff6b6b;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.program p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.program h2 {
   margin-top: 20px;
-  margin-right: 1000px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #00ff95;
+}
+
+/* Weekly Day Buttons */
+.btn {
+  display: inline-block;
+  background: #00ff95;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  margin: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 120px;
+}
+
+.btn:hover {
+  background: #00cc77;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 420px) {
+  .btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .logo .h1 {
+    font-size: 1.2rem;
+  }
+
+  .profile {
+    width: 40px;
+    height: 40px;
+  }
+
+  .program h1 {
+    font-size: 1rem;
+  }
+
+  .program p {
+    font-size: 0.85rem;
+  }
 }
