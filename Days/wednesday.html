@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Workout</title>
+  <link rel="stylesheet" href="Sifiso-style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏋️ Workout Tracker</h1>
+      <a href="timer.html" class="timer-link">Go to Timer</a>
+      </a>
+      <br>
+      <hr>
+
+    </header>
+
+    <section class="workout-list">
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Squats</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Side to Side Squats</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Jumping Squats</h2>
+        <p>10x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Rest</h2>
+        <p>10s</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>pistol squat</h2>
+        <p>7x each</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Rest</h2>
+        <p>20s</p>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Cossack squat</h2>
+        <p>10x</p>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Bulgarian split squat</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Switching lunges</h2>
+        <p>13x</p>
+           <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>rest</h2>
+        <p>10s</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>calf raises</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>leg glute bridges</h2>
+        <p>20x</p>
+      </div>
+
+      <!--- Secong set --->
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Squats</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Side to Side Squats</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Jumping Squats</h2>
+        <p>10x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Rest</h2>
+        <p>10s</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>pistol squat</h2>
+        <p>7x each</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Rest</h2>
+        <p>20s</p>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Cossack squat</h2>
+        <p>10x</p>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Bulgarian split squat</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Switching lunges</h2>
+        <p>13x</p>
+           <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>rest</h2>
+        <p>10s</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>calf raises</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>leg glute bridges</h2>
+        <p>20x</p>
+      </div>
+     
+      <br>
+      <br>
+    </section>
+
+    <footer>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <p id="progressText">0% Completed</p>
+    </footer>
+  </div>
+  </main>
+
+  <script>
+   function toggleWorkout(card) {
+  card.classList.toggle('completed');
+  updateProgress();
+}
+
+function updateProgress() {
+  const allCards = document.querySelectorAll('.workout-card');
+  const completed = document.querySelectorAll('.workout-card.completed').length;
+  const percentage = Math.round((completed / allCards.length) * 100);
+
+  const bar = document.getElementById('progressBar');
+  const text = document.getElementById('progressText');
+
+  bar.style.width = `${percentage}%`;
+  text.textContent = `${percentage}% Completed`;
+}
+
+  </script>
+</body>
+</html>
