@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Workout</title>
+  <link rel="stylesheet" href="Sifiso-style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏋️ Workout Tracker</h1>
+      <a href="timer.html" class="timer-link">Go to Timer</a>
+      </a>
+      <br>
+      <hr>
+
+    </header>
+
+    <section class="workout-list">
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Add one Dumbel</h2>
+        <p></p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2> One-arm Overhead Tricep Extension</h2>
+        <p>10x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Single arm curl</h2>
+        <p>10x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Tricep Floor Press</h2>
+        <p>20x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Hammer Curl</h2>
+        <p>15x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>diamond pushups</h2>
+        <p>15x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>reved curls</h2>
+        <p>15x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Knee curls</h2>
+        <p>15x</p>
+      </div>
+      <div class="workout-card" onclick="toggleWorkout(this)">
+        <h2>Isometric curl hold</h2>
+        <p>20s</p>
+      </div>
+               
+      <br>
+      <br>
+    </section>
+
+    <footer>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <p id="progressText">0% Completed</p>
+    </footer>
+  </div>
+  </main>
+
+  <script>
+   function toggleWorkout(card) {
+  card.classList.toggle('completed');
+  updateProgress();
+}
+
+function updateProgress() {
+  const allCards = document.querySelectorAll('.workout-card');
+  const completed = document.querySelectorAll('.workout-card.completed').length;
+  const percentage = Math.round((completed / allCards.length) * 100);
+
+  const bar = document.getElementById('progressBar');
+  const text = document.getElementById('progressText');
+
+  bar.style.width = `${percentage}%`;
+  text.textContent = `${percentage}% Completed`;
+}
+
+  </script>
+</body>
+</html>
