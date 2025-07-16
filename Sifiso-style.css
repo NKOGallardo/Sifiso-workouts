@@ -290,14 +290,15 @@ footer {
     margin: 10px 0;
   }
 
-  .logo .h1 {
-    font-size: 1.2rem;
-  }
-
   .profile {
     width: 40px;
     height: 40px;
   }
+
+   .logo .h1 {
+    font-size: 1.2rem;
+  }
+
 
   .program h1 {
     font-size: 1rem;
